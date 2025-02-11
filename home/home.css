@@ -52,7 +52,7 @@
     transition: all ease 0.3s;
 }
 
-.memory-card:hoover{
+.memory-card:hover{
     scale: 1.02;
     cursor: pointer;
 }
