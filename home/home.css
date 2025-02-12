@@ -55,6 +55,8 @@
 .memory-card:hover{
     scale: 1.02;
     cursor: pointer;
+    background-color: #54bcd9;
+    border: 1px solid #ccc;
 }
 
 .memory-card .image{
@@ -99,11 +101,9 @@
 }
 
 
-
-
 .memory-card h2 {
 
-    font-size: 50px;
+    font-size: 33px;
     font-weight: normal;
     color: #464646;
 }
