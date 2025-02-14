@@ -57,3 +57,14 @@ let n1 = "42";
 n1 = Number(n1);
 console.log(n1);
 
+//Estrutura condicional
+
+const idade___ = 18;
+
+if (idade___ < 18) {
+    console.log("Menor de idade");
+} else if (idade___ === 18) {
+    console.log("Acabou de atingir a maioridade penal");
+} else {
+    console.log ("Maior de idade");
+} 
