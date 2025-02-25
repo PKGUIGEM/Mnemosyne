@@ -1,14 +1,35 @@
+import { useEffect, useState } from "react";
 import Header from "../../components/header";
 import "./home.css";
+import memory from "../../services/memory";
 
 
 
 const Home = () => {
+
+    const [memories, setMemories] = useState([]);
+
+    useEffect(() => {
+
+        getMemoriesList();
+
+    }, [])
+
+    const getMemoriesList = async () => {
+
+        const lista = await memory.getMemories();
+
+        console.log("Lista: ", lista);
+
+        setMemories(lista);
+
+    }
+
     return (
         <>
 
-        <Header></Header>
-           
+            <Header></Header>
+
 
             <main className="app-main">
 
@@ -16,66 +37,24 @@ const Home = () => {
 
                 <div className="memories-container">
 
-                    <div className="memory-card">
+                    {memories.map((memory, index) => (
 
-                        <div className="image"></div>
+                        <a key={index} href={`/memory?id${memory.id}`}>
 
-                        <h2>Meu afilhado!</h2>
 
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
+                            <div className="memory-card">
 
-                    </div>
+                                <div className="image" style={{ backgroundImage: `url(${memory.images[0]})` }}></div>
 
-                    <div className="memory-card">
+                                <h2>{memory.title}</h2>
 
-                        <div className="image"></div>
+                                <p>{memory.description}</p>
 
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
-                    <div className="memory-card">
-
-                        <div className="image"></div>
-
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
-                    <div className="memory-card">
-
-                        <div className="image"></div>
-
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
-                    <div className="memory-card">
-
-                        <div className="image"></div>
-
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
-                    <div className="memory-card">
-
-                        <div className="image"></div>
-
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
+                            </div>
+                        
+                        </a>
+                  
+                    ))}
                 </div>
 
             </main>

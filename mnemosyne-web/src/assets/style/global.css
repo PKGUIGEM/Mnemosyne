@@ -37,16 +37,17 @@
     align-items: center;
     justify-content: space-between;
     align-items: center;
-
     padding-left: 80px;
     padding-right: 80px;
 
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 
+
 }
 
 .app-header .links a {
 
+    
     font-size: 30px;
     text-decoration: none;
     margin-left: 35px;
