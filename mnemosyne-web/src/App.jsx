@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-import Home from "./pages/new-memory";
+import NewMemory from "./pages/new-memory";
 
 function App() {
   return (
