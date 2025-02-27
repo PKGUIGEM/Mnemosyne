@@ -30,53 +30,20 @@ const Home = () => {
 
             <Header></Header>
 
-            <main clasName="app-main">
-    <h1>Criar memória</h1>
-
-    <p clasName="feedback"></p>
-
-    <div clasName="form-container">
-        <label>
-            <span>Título</span>
-            <input type="text" placeholder="Insira o título aqui." />
-        </label>
-
-        <label>
-            <span>Descrição</span>
-            <textarea placeholder="Insira a descrição aqui."></textarea>
-        </label>
-
-        <label htmlfor="file-input" clasName="file">
-            <span>Imagens</span>
-            <span clasName="input-file-button">Adicionar imagem</span>
-            <input id="file-input" type="file" multiple />
-            <span clasName="no-images">Nenhuma imagem no momento.</span>
-            <div clasName="images-container"></div>
-        </label>
-    </div>
-
-    <button clasName="create-memory-btn">Criar memória</button>
-</main>
-
-<footer clasName="app-footer">
-    <p>Mnemosyne - Ariel Paixão dos Santos</p>
-</footer>
-
-
-            <main clasNameName="app-main">
+            <main className="app-main">
 
                 <h1>Meus momentos</h1>
 
-                <div clasNameName="memories-container">
+                <div className="memories-container">
 
                     {memories.map((memory, index) => (
 
-                        <a key={index} href={`/memory?id${memory.id}`}>
+                        <a key={index} href={`/memory?id=${memory.id}`}>
 
 
-                            <div clasNameName="memory-card">
+                            <div className="memory-card">
 
-                                <div clasNameName="image" style={{ backgroundImage: `url(${memory.images[0]})` }}></div>
+                                <div className="image" style={{ backgroundImage: `url(${memory.images[0]})` }}></div>
 
                                 <h2>{memory.title}</h2>
 
@@ -91,7 +58,7 @@ const Home = () => {
 
             </main>
 
-            <footer clasNameName="app-footer">
+            <footer className="app-footer">
 
                 <p>Mnemosyne - Ariel Paixão dos Santos</p>
 
