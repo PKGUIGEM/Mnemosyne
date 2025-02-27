@@ -18,6 +18,8 @@ const Memory = () => {
 
         getMemory(memoryId);
 
+        document.title = "Tela de Detalhes";
+
     }, [])
 
 
