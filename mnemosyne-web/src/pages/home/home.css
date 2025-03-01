@@ -17,10 +17,10 @@
     margin-bottom: 40px;
     transition: all ease 0.3s;
 
-}   
+}
 
 .memory-card:hover {
-    
+
     cursor: pointer;
 
     scale: 1.02;
@@ -42,5 +42,5 @@
 
     font-size: 3em;
     font-weight: normal;
-    
+
 }
